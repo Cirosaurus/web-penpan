@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pancasila sebagai Ideologi Terbuka</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --red: #b91c1c;
+            --dark-red: #7f1d1d;
+            --gold: #f59e0b;
+            --cream: #fffaf0;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --green: #15803d;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(127, 29, 29, 0.97);
+            padding: 14px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(245,158,11,0.25), transparent 30%),
+                linear-gradient(135deg, #7f1d1d, #b91c1c);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 72px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 19px;
+            opacity: 0.95;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            background: var(--gold);
+            color: #451a03;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.2);
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: var(--dark-red);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            border: 1px solid #eee;
+        }
+
+        .card h3 {
+            color: var(--dark-red);
+            margin-bottom: 12px;
+        }
+
+        .icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .highlight {
+            background: #fef3c7;
+            border-left: 5px solid var(--gold);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .warning {
+            background: #fee2e2;
+            border-left: 5px solid var(--red);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .positive {
+            background: #dcfce7;
+            border-left: 5px solid var(--green);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        /* FLOW */
+
+        .flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 35px;
+        }
+
+        .flow-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 150px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            font-weight: bold;
+        }
+
+        .arrow {
+            font-size: 28px;
+            color: var(--red);
+        }
+
+        /* PANCASILA */
+
+        .sila {
+            border-left: 6px solid var(--red);
+        }
+
+        .sila-number {
+            font-size: 14px;
+            color: var(--gray);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* DATA */
+
+        .stat {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: bold;
+            color: var(--red);
+        }
+
+        .stat-label {
+            color: var(--gray);
+        }
+
+        .source {
+            font-size: 13px;
+            color: var(--gray);
+            margin-top: 12px;
+        }
+
+        /* INTERVIEW */
+
+        .interview-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+        }
+
+        .question {
+            color: var(--dark-red);
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .answer {
+            background: #f9fafb;
+            padding: 18px;
+            border-radius: 10px;
+            border-left: 4px solid var(--gold);
+        }
+
+        /* FILTER */
+
+        .filter-box {
+            background: linear-gradient(135deg, #7f1d1d, #b91c1c);
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .filter-box h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .filter-step {
+            background: rgba(255,255,255,0.12);
+            padding: 18px;
+            border-radius: 12px;
+            margin: 12px 0;
+        }
+
+        /* QUIZ */
+
+        .quiz-container {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .quiz-question {
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .option {
+            width: 100%;
+            text-align: left;
+            padding: 15px;
+            margin: 9px 0;
+            background: #f3f4f6;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .option:hover {
+            border-color: var(--gold);
+        }
+
+        .option.correct {
+            background: #dcfce7;
+            border-color: var(--green);
+        }
+
+        .option.wrong {
+            background: #fee2e2;
+            border-color: var(--red);
+        }
+
+        #feedback {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #nextBtn {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #result {
+            display: none;
+            text-align: center;
+        }
+
+        #score {
+            font-size: 50px;
+            color: var(--red);
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            color: #d1d5db;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .flow {
+                flex-direction: column;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">
+        Pancasila<span>+</span>
+    </div>
+
+    <ul>
+        <li><a href="#ideologi">Ideologi</a></li>
+        <li><a href="#pancasila">Pancasila</a></li>
+        <li><a href="#globalisasi">Globalisasi</a></li>
+        <li><a href="#westernisasi">Westernisasi</a></li>
+        <li><a href="#living">Living Together</a></li>
+        <li><a href="#wawancara">Wawancara</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+    </ul>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Pancasila sebagai
+            <span>Ideologi Terbuka</span>
+        </h1>
+
+        <p>
+            Memahami keterbukaan terhadap perubahan zaman,
+            globalisasi, westernisasi, dan fenomena
+            living together di Indonesia.
+        </p>
+
+        <a href="#ideologi" class="btn">
+            Mulai Belajar
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- IDEOLOGI TERBUKA -->
+
+<section id="ideologi">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Apa Itu Ideologi Terbuka?</h2>
+            <p>
+                Memahami konsep keterbukaan sebuah ideologi
+                terhadap perkembangan zaman.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <div class="icon">💡</div>
+
+                <h3>Ideologi</h3>
+
+                <p>
+                    Ideologi merupakan seperangkat gagasan,
+                    nilai, dan prinsip yang menjadi dasar dalam
+                    mengarahkan kehidupan suatu masyarakat
+                    atau negara.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌎</div>
+
+                <h3>Ideologi Terbuka</h3>
+
+                <p>
+                    Ideologi terbuka adalah ideologi yang mampu
+                    menghadapi perkembangan dan perubahan zaman
+                    tanpa kehilangan nilai dasar yang menjadi
+                    identitasnya.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧠</div>
+
+                <h3>Bukan Berarti Tanpa Batas</h3>
+
+                <p>
+                    Keterbukaan tidak berarti menerima seluruh
+                    pengaruh dari luar. Pengaruh tersebut tetap
+                    perlu dikaji, disaring, dan disesuaikan
+                    dengan nilai yang dianut masyarakat.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PANCASILA -->
+
+<section id="pancasila" style="background:#f3f4f6;">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Pancasila sebagai Ideologi Terbuka</h2>
+
+            <p>
+                Pancasila memiliki nilai dasar yang menjadi
+                landasan kehidupan bangsa, sekaligus mampu
+                menghadapi perkembangan zaman.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card sila">
+                <div class="sila-number">Sila 1</div>
+                <h3>Ketuhanan Yang Maha Esa</h3>
+                <p>
+                    Perubahan zaman tetap perlu memperhatikan
+                    nilai ketuhanan dan kehidupan beragama.
+                </p>
+            </div>
+
+            <div class="card sila">
+                <div class="sila-number">Sila 2</div>
+                <h3>Kemanusiaan yang Adil dan Beradab</h3>
+                <p>
+                    Kebebasan individu perlu disertai penghormatan
+                    terhadap martabat dan tanggung jawab terhadap
+                    sesama manusia.
+                </p>
+            </div>
+
+            <div class="card sila">
+                <div class="sila-number">Sila 3</div>
+                <h3>Persatuan Indonesia</h3>
+                <p>
+                    Keterbukaan terhadap budaya global tidak
+                    berarti kehilangan identitas bangsa.
+                </p>
+            </div>
+
+            <div class="card sila">
+                <div class="sila-number">Sila 4</div>
+                <h3>Kerakyatan</h3>
+                <p>
+                    Perubahan sosial perlu dihadapi melalui
+                    pertimbangan, dialog, dan sikap demokratis.
+                </p>
+            </div>
+
+            <div class="card sila">
+                <div class="sila-number">Sila 5</div>
+                <h3>Keadilan Sosial</h3>
+                <p>
+                    Perubahan dan perkembangan harus diarahkan
+                    agar memberikan manfaat secara adil bagi
+                    masyarakat.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GLOBALISASI -->
+
+<section id="globalisasi">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Apa Itu Globalisasi?</h2>
+
+            <p>
+                Globalisasi mempercepat hubungan dan pertukaran
+                informasi, teknologi, ekonomi, dan budaya antarwilayah.
+            </p>
+
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <div class="icon">🌐</div>
+                <h3>Informasi</h3>
+                <p>
+                    Informasi dari berbagai negara dapat
+                    diterima dengan cepat melalui internet.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Teknologi</h3>
+                <p>
+                    Perkembangan teknologi memungkinkan manusia
+                    berkomunikasi dan bekerja lintas negara.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎬</div>
+                <h3>Budaya</h3>
+                <p>
+                    Film, musik, tren, gaya hidup, dan kebiasaan
+                    dari berbagai negara dapat tersebar dengan cepat.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WESTERNISASI -->
+
+<section id="westernisasi" style="background:#f3f4f6;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Apa Itu Westernisasi?</h2>
+
+            <p>
+                Westernisasi merupakan proses masuk atau
+                diadopsinya unsur gaya hidup dan budaya Barat
+                oleh masyarakat.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <strong>Catatan penting:</strong>
+
+            <p>
+                Westernisasi tidak sama dengan globalisasi.
+                Globalisasi merupakan proses keterhubungan yang
+                lebih luas, sedangkan westernisasi merupakan salah
+                satu bentuk pengaruh budaya yang dapat muncul dalam
+                proses tersebut.
+            </p>
+
+        </div>
+
+        <div class="flow">
+
+            <div class="flow-box">
+                🌎<br>
+                Globalisasi
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                📱<br>
+                Pertukaran Budaya
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                🌐<br>
+                Pengaruh Budaya Asing
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                🧠<br>
+                Perubahan Pandangan
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DAMPAK -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Dampak Globalisasi & Westernisasi</h2>
+
+            <p>
+                Pengaruh globalisasi dan budaya asing dapat
+                menghasilkan peluang sekaligus tantangan.
+            </p>
+
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card">
+
+                <h3>✅ Dampak Positif</h3>
+
+                <ul>
+                    <li>Akses informasi semakin luas.</li>
+                    <li>Perkembangan teknologi semakin cepat.</li>
+                    <li>Kerja sama internasional semakin mudah.</li>
+                    <li>Pengetahuan mengenai budaya lain bertambah.</li>
+                    <li>Muncul peluang inovasi dan kreativitas.</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>⚠️ Potensi Dampak Negatif</h3>
+
+                <ul>
+                    <li>Konsumtivisme.</li>
+                    <li>Individualisme.</li>
+                    <li>FOMO terhadap tren.</li>
+                    <li>Menurunnya ketertarikan terhadap budaya lokal.</li>
+                    <li>Penerimaan gaya hidup tanpa pertimbangan.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DATA KASUS -->
+
+<section id="data" style="background:#f3f4f6;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Living Together di Indonesia</h2>
+
+            <p>
+                Apa yang dapat kita ketahui dari penelitian
+                mengenai fenomena living together?
+            </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+            <div class="stat">
+
+                <div class="stat-number">24</div>
+
+                <div class="stat-label">
+                    publikasi yang dianalisis dalam studi
+                    bibliometrik tahun 2026
+                </div>
+
+                <p class="source">
+                    Rentang publikasi: 2022–2025
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">Bandung</div>
+
+                <div class="stat-label">
+                    menjadi lokasi penelitian mengenai
+                    living together pada mahasiswa
+                </div>
+
+                <p class="source">
+                    Studi UPI (2023) dan studi mahasiswa
+                    Bandung (2026)
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">2026</div>
+
+                <div class="stat-label">
+                    terdapat penelitian baru mengenai
+                    kohabitasi mahasiswa di beberapa kota
+                </div>
+
+                <p class="source">
+                    Bandung, Malang, dan Semarang
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <strong>⚠️ Cara membaca data:</strong>
+
+            <p>
+                Data di atas bukan angka prevalensi nasional.
+                Angka tersebut menunjukkan perkembangan penelitian
+                dan contoh lokasi studi. Sampai data yang digunakan
+                dalam website ini, belum terdapat dasar yang cukup
+                untuk menyatakan berapa persen masyarakat Indonesia
+                melakukan living together.
+            </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+            <div class="card">
+
+                <h3>📍 Bandung</h3>
+
+                <p>
+                    Penelitian UPI tahun 2023 mengkaji praktik
+                    living together pada mahasiswa kos di Kota Bandung.
+                    Penelitian tersebut membahas faktor penyebab dan
+                    dampak yang dialami mahasiswa.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📍 Malang</h3>
+
+                <p>
+                    Penelitian Universitas Muhammadiyah Malang
+                    tahun 2026 mengkaji motivasi living together
+                    pada mahasiswa, termasuk faktor ekonomi,
+                    lingkungan sosial, dan faktor psikologis.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📍 Semarang</h3>
+
+                <p>
+                    Penelitian tahun 2026 mengenai mahasiswa
+                    di Semarang menemukan adanya pertimbangan
+                    emosional dan ekonomi dalam praktik kohabitasi.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LIVING TOGETHER -->
+
+<section id="living">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Apa Itu Living Together?</h2>
+
+            <p>
+                Living together atau kohabitasi adalah keadaan
+                ketika pasangan yang belum menikah tinggal bersama
+                dalam satu tempat tinggal.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Living Together ≠ Globalisasi secara langsung</h3>
+
+            <p>
+                Fenomena living together tidak dapat secara otomatis
+                dianggap sebagai akibat langsung globalisasi atau
+                westernisasi. Berbagai penelitian menunjukkan bahwa
+                keputusan tersebut dapat berkaitan dengan banyak
+                faktor, seperti kebutuhan emosional, ekonomi,
+                lingkungan sosial, efisiensi hidup, dan cara pandang
+                terhadap hubungan.
+            </p>
+
+            <div class="highlight">
+
+                <strong>
+                    Dalam website ini, globalisasi diposisikan
+                    sebagai konteks perubahan sosial, bukan satu-satunya
+                    penyebab living together.
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PENYEBAB -->
+
+<section style="background:#f3f4f6;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Faktor yang Dapat Melatarbelakangi</h2>
+
+            <p>
+                Tidak ada satu penyebab yang berlaku untuk semua orang.
+            </p>
+
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card">
+
+                <div class="icon">❤️</div>
+
+                <h3>Emosional</h3>
+
+                <p>
+                    Keinginan untuk selalu dekat dengan pasangan,
+                    kebutuhan akan kenyamanan, dan kedekatan emosional.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">💰</div>
+
+                <h3>Ekonomi</h3>
+
+                <p>
+                    Pertimbangan pembagian biaya tempat tinggal,
+                    makanan, dan kebutuhan sehari-hari.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">👥</div>
+
+                <h3>Lingkungan Sosial</h3>
+
+                <p>
+                    Pengaruh teman sebaya, lingkungan pergaulan,
+                    dan perubahan norma sosial.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">📱</div>
+
+                <h3>Media & Budaya</h3>
+
+                <p>
+                    Media sosial, film, tren, dan budaya populer
+                    dapat memengaruhi cara seseorang memandang
+                    suatu gaya hidup.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DAMPAK LIVING TOGETHER -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Dampak Living Together</h2>
+
+            <p>
+                Dampak dapat berbeda tergantung pengalaman,
+                kondisi, dan lingkungan setiap individu.
+            </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+            <div class="card">
+
+                <h3>Potensi yang Dipersepsikan</h3>
+
+                <ul>
+                    <li>Kedekatan dengan pasangan.</li>
+                    <li>Dukungan dalam kehidupan sehari-hari.</li>
+                    <li>Efisiensi waktu dan biaya.</li>
+                    <li>Kesempatan memahami kebiasaan pasangan.</li>
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Potensi Risiko</h3>
+
+                <ul>
+                    <li>Konflik dalam kehidupan bersama.</li>
+                    <li>Tekanan atau stigma sosial.</li>
+                    <li>Konflik dengan nilai agama atau keluarga.</li>
+                    <li>Masalah privasi dan batas personal.</li>
+                    <li>Gangguan terhadap aktivitas akademik dalam beberapa kasus.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WAWANCARA -->
+
+<section id="wawancara" style="background:#f3f4f6;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Hasil Wawancara</h2>
+
+            <p>
+                Pandangan seorang subjek pelajar SMK yang
+                tertarik terhadap konsep living together.
+            </p>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question">
+                1. Menurut kamu, apa yang dimaksud dengan living together?
+            </div>
+
+            <div class="answer">
+                Living together dipahami sebagai kegiatan tinggal
+                bersama dengan pasangan tanpa ikatan perkawinan
+                yang diakui secara hukum dan agama.
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question">
+                2. Apa alasan orang-orang mau melakukan living together?
+            </div>
+
+            <div class="answer">
+                Menurut subjek, beberapa alasan dapat berupa keinginan
+                untuk selalu dekat dengan pasangan, kenyamanan,
+                faktor ekonomi, kebutuhan emosional, rasa penasaran,
+                hingga faktor keluarga.
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question">
+                3. Apakah media sosial, film, dan budaya asing
+                memengaruhi cara berpikir anak muda?
+            </div>
+
+            <div class="answer">
+                Menurut subjek, media sosial, film, dan budaya asing
+                dapat memengaruhi cara berpikir anak muda. Ia juga
+                mengaitkannya dengan FOMO atau rasa takut tertinggal
+                terhadap sesuatu yang sedang menjadi tren.
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question">
+                4. Apakah ideologi terbuka berarti menerima semua
+                gaya hidup?
+            </div>
+
+            <div class="answer">
+                Menurut subjek, Pancasila sebagai ideologi terbuka
+                memang memungkinkan Indonesia berkembang mengikuti
+                perubahan zaman, tetapi bukan berarti menerima
+                seluruh pengaruh asing tanpa penyaringan.
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question">
+                5. Apa yang harus dilakukan generasi muda?
+            </div>
+
+            <div class="answer">
+                Subjek berpendapat bahwa generasi muda perlu bersikap
+                kritis dalam memilih budaya atau dampak globalisasi
+                dan westernisasi, serta membedakan pengaruh yang
+                sesuai dan tidak sesuai dengan nilai Pancasila.
+            </div>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <strong>Catatan metodologis:</strong>
+
+            <p>
+                Jawaban di atas merupakan pandangan satu subjek
+                wawancara. Jawaban tersebut tidak dapat digunakan
+                untuk mewakili seluruh pelajar atau generasi muda
+                Indonesia.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PANCASILA FILTER -->
+
+<section id="filter">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Living Together & Pancasila</h2>
+
+            <p>
+                Bagaimana konsep ideologi terbuka digunakan
+                untuk memahami fenomena tersebut?
+            </p>
+
+        </div>
+
+
+        <div class="filter-box">
+
+            <h3>🇮🇩 PANCASILA FILTER</h3>
+
+            <p>
+                Terbuka terhadap perubahan bukan berarti
+                menerima semuanya tanpa pertimbangan.
+            </p>
+
+
+            <div class="filter-step">
+
+                <strong>1. TERBUKA</strong>
+
+                <p>
+                    Mempelajari perkembangan sosial dan budaya
+                    yang muncul di masyarakat.
+                </p>
+
+            </div>
+
+
+            <div class="filter-step">
+
+                <strong>2. KRITIS</strong>
+
+                <p>
+                    Memahami alasan, konteks, manfaat,
+                    dan potensi konsekuensinya.
+                </p>
+
+            </div>
+
+
+            <div class="filter-step">
+
+                <strong>3. SELEKTIF</strong>
+
+                <p>
+                    Menentukan pengaruh mana yang dapat diterima
+                    dan mana yang tidak sesuai dengan nilai yang dianut.
+                </p>
+
+            </div>
+
+
+            <div class="filter-step">
+
+                <strong>4. BERTANGGUNG JAWAB</strong>
+
+                <p>
+                    Mempertimbangkan nilai Pancasila,
+                    norma sosial, agama, serta konsekuensi
+                    terhadap diri sendiri dan orang lain.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <br><br>
+
+
+        <div class="card-grid">
+
+            <div class="card sila">
+
+                <div class="sila-number">
+                    Sila 1
+                </div>
+
+                <h3>Ketuhanan</h3>
+
+                <p>
+                    Fenomena living together dapat dianalisis
+                    dengan mempertimbangkan nilai agama dan
+                    keyakinan yang dianut masyarakat.
+                </p>
+
+            </div>
+
+
+            <div class="card sila">
+
+                <div class="sila-number">
+                    Sila 2
+                </div>
+
+                <h3>Kemanusiaan</h3>
+
+                <p>
+                    Kebebasan individu perlu disertai tanggung jawab,
+                    penghormatan terhadap martabat manusia, dan
+                    pertimbangan terhadap dampak kepada pihak lain.
+                </p>
+
+            </div>
+
+
+            <div class="card sila">
+
+                <div class="sila-number">
+                    Sila 3
+                </div>
+
+                <h3>Persatuan Indonesia</h3>
+
+                <p>
+                    Keterbukaan terhadap budaya global perlu tetap
+                    disertai kesadaran terhadap identitas dan nilai
+                    yang berkembang dalam masyarakat Indonesia.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="warning">
+
+            <strong>Kesimpulan analisis:</strong>
+
+            <p>
+                Pancasila sebagai ideologi terbuka tidak berarti
+                menerima seluruh gaya hidup yang muncul akibat
+                perubahan zaman. Keterbukaan dapat dilakukan
+                secara kritis dan selektif dengan tetap menjadikan
+                nilai dasar Pancasila sebagai landasan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section id="quiz" style="background:#f3f4f6;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>🎮 Pancasila Filter Quiz</h2>
+
+            <p>
+                Uji pemahamanmu tentang Pancasila,
+                globalisasi, westernisasi, dan living together.
+            </p>
+
+        </div>
+
+
+        <div class="quiz-container">
+
+            <div id="quizArea">
+
+                <div id="questionNumber"></div>
+
+                <div class="quiz-question" id="question">
+                    Loading...
+                </div>
+
+                <div id="options"></div>
+
+                <div id="feedback"></div>
+
+                <button id="nextBtn" class="btn">
+                    Pertanyaan Berikutnya
+                </button>
+
+            </div>
+
+
+            <div id="result">
+
+                <h2>Quiz Selesai! 🎉</h2>
+
+                <p>
+                    Skor kamu:
+                </p>
+
+                <div id="score">
+                    0/5
+                </div>
+
+                <p id="resultText"></p>
+
+                <button
+                    class="btn"
+                    onclick="restartQuiz()"
+                    style="margin-top:20px;"
+                >
+                    Ulangi Quiz
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Pancasila sebagai Ideologi Terbuka</h3>
+
+    <p>
+        Media edukasi mengenai globalisasi, westernisasi,
+        dan perubahan gaya hidup generasi muda.
+    </p>
+
+    <br>
+
+    <p>
+        Dikembangkan sebagai karya pembelajaran mahasiswa
+        Teknik Komputer.
+    </p>
+
+</footer>
+
+
+<script>
+
+    /* =========================
+       QUIZ DATA
+    ========================= */
+
+    const questions = [
+
+        {
+            question:
+                "Apa yang dimaksud dengan ideologi terbuka?",
+
+            options: [
+                "Ideologi yang dapat diganti kapan saja",
+                "Ideologi yang mampu menghadapi perkembangan zaman tanpa kehilangan nilai dasarnya",
+                "Ideologi yang menerima seluruh budaya asing",
+                "Ideologi yang menolak perubahan"
+            ],
+
+            answer: 1
+        },
+
+
+        {
+            question:
+                "Bagaimana sikap yang sesuai dengan Pancasila sebagai ideologi terbuka terhadap budaya asing?",
+
+            options: [
+                "Menerima semuanya",
+                "Menolak semuanya",
+                "Menyaring dan memilih berdasarkan nilai yang sesuai",
+                "Mengikuti budaya yang paling populer"
+            ],
+
+            answer: 2
+        },
+
+
+        {
+            question:
+                "Manakah yang paling tepat menggambarkan hubungan globalisasi dengan living together?",
+
+            options: [
+                "Living together pasti merupakan akibat langsung globalisasi",
+                "Globalisasi merupakan satu-satunya penyebab living together",
+                "Globalisasi dapat menjadi salah satu konteks perubahan sosial yang memengaruhi cara pandang",
+                "Globalisasi tidak pernah berkaitan dengan perubahan gaya hidup"
+            ],
+
+            answer: 2
+        },
+
+
+        {
+            question:
+                "Jika suatu gaya hidup dari luar negeri sedang viral, apa yang sebaiknya dilakukan?",
+
+            options: [
+                "Langsung mengikuti agar tidak FOMO",
+                "Langsung menolak karena berasal dari luar negeri",
+                "Mempelajari dan menyaringnya berdasarkan nilai yang relevan",
+                "Mengikuti karena dianggap modern"
+            ],
+
+            answer: 2
+        },
+
+
+        {
+            question:
+                "Pancasila sebagai ideologi terbuka dapat diringkas dengan prinsip...", 
+
+            options: [
+                "Terbuka tanpa batas",
+                "Tertutup terhadap perubahan",
+                "Terbuka, kritis, selektif, dan bertanggung jawab",
+                "Mengikuti seluruh perkembangan budaya asing"
+            ],
+
+            answer: 2
+        }
+
+    ];
+
+
+    let currentQuestion = 0;
+    let score = 0;
+    let answered = false;
+
+
+    const questionElement =
+        document.getElementById("question");
+
+    const optionsElement =
+        document.getElementById("options");
+
+    const feedbackElement =
+        document.getElementById("feedback");
+
+    const nextButton =
+        document.getElementById("nextBtn");
+
+    const questionNumber =
+        document.getElementById("questionNumber");
+
+    const quizArea =
+        document.getElementById("quizArea");
+
+    const resultArea =
+        document.getElementById("result");
+
+    const scoreElement =
+        document.getElementById("score");
+
+    const resultText =
+        document.getElementById("resultText");
+
+
+    function loadQuestion() {
+
+        answered = false;
+
+        const q = questions[currentQuestion];
+
+        questionNumber.textContent =
+            `Pertanyaan ${currentQuestion + 1} dari ${questions.length}`;
+
+        questionElement.textContent =
+            q.question;
+
+        optionsElement.innerHTML = "";
+
+        feedbackElement.textContent = "";
+
+        nextButton.style.display = "none";
+
+
+        q.options.forEach((option, index) => {
+
+            const button =
+                document.createElement("button");
+
+            button.className = "option";
+
+            button.textContent = option;
+
+            button.addEventListener(
+                "click",
+                () => selectAnswer(index, button)
+            );
+
+            optionsElement.appendChild(button);
+
+        });
+
+    }
+
+
+    function selectAnswer(index, button) {
+
+        if (answered) return;
+
+        answered = true;
+
+        const correct =
+            questions[currentQuestion].answer;
+
+        const buttons =
+            document.querySelectorAll(".option");
+
+
+        buttons.forEach(btn => {
+            btn.disabled = true;
+        });
+
+
+        if (index === correct) {
+
+            button.classList.add("correct");
+
+            feedbackElement.textContent =
+                "✅ Benar! Sikap kritis dan selektif merupakan bagian penting dari ideologi terbuka.";
+
+            score++;
+
+        } else {
+
+            button.classList.add("wrong");
+
+            buttons[correct].classList.add("correct");
+
+            feedbackElement.textContent =
+                "❌ Belum tepat. Ingat: terbuka bukan berarti menerima semuanya tanpa penyaringan.";
+
+        }
+
+
+        nextButton.style.display = "inline-block";
+
+    }
+
+
+    nextButton.addEventListener(
+        "click",
+        () => {
+
+            currentQuestion++;
+
+            if (currentQuestion < questions.length) {
+
+                loadQuestion();
+
+            } else {
+
+                showResult();
+
+            }
+
+        }
+    );
+
+
+    function showResult() {
+
+        quizArea.style.display = "none";
+
+        resultArea.style.display = "block";
+
+        scoreElement.textContent =
+            `${score}/${questions.length}`;
+
+
+        if (score === questions.length) {
+
+            resultText.textContent =
+                "Mantap! Kamu memahami konsep Pancasila sebagai ideologi terbuka.";
+
+        } else if (score >= 3) {
+
+            resultText.textContent =
+                "Bagus! Tinggal perdalam lagi hubungan globalisasi, living together, dan Pancasila.";
+
+        } else {
+
+            resultText.textContent =
+                "Coba pelajari kembali materi dan ulangi quiz.";
+
+        }
+
+    }
+
+
+    function restartQuiz() {
+
+        currentQuestion = 0;
+
+        score = 0;
+
+        resultArea.style.display = "none";
+
+        quizArea.style.display = "block";
+
+        loadQuestion();
+
+    }
+
+
+    /* Mulai quiz */
+
+    loadQuestion();
+
+</script>
+
+</body>
+</html>
