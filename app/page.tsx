@@ -858,7 +858,7 @@ export default function HomePage() {
               <details>
                 <summary>Apa alasan orang-orang mau melakukan living together?</summary>
                 <p>
-                  Orang-oranag biasa milih buat ngelakuin living together tuh 
+                  Orang-orang biasa milih buat ngelakuin living together tuh 
                   karena mereka pingin selalu deket dengan orang yang bikin dia nyaman. 
                   Faktor ekonomi juga berpengaruh, zaman sekarang serba mahal kalo hidup sendiri, 
                   kalo hidup berdua bisa mengurangi biaya hidup yang besar, kenapa nggak? 
