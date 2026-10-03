@@ -847,42 +847,51 @@ export default function HomePage() {
                 <p>Pilih pertanyaan untuk membaca jawaban.</p>
               </div>
               <details>
-                <summary>Bagaimana narasumber memahami living together?</summary>
+                <summary>Menurut kamu, apa yang dimaksud dengan living together?</summary>
                 <p>
-                  Narasumber memahami living together sebagai kegiatan tinggal
-                  bersama pasangan tanpa ikatan perkawinan yang diakui secara
-                  hukum dan agama.
+                Living together merupakan sebuah kegiatan tinggal 
+                bersama dengan pasangan/pacar 
+                yang tidak terdaftar di pemerintah dan 
+                tidak sesuai dengan agama
                 </p>
               </details>
               <details>
-                <summary>Faktor apa yang disebut dalam wawancara?</summary>
+                <summary>Apa alasan orang-orang mau melakukan living together?</summary>
                 <p>
-                  Narasumber menyebut kedekatan, kenyamanan, faktor ekonomi,
-                  kebutuhan emosional, rasa penasaran, dan faktor keluarga
-                  sebagai kemungkinan alasan.
+                  Orang-oranag biasa milih buat ngelakuin living together tuh 
+                  karena mereka pingin selalu deket dengan orang yang bikin dia nyaman. 
+                  Faktor ekonomi juga berpengaruh, zaman sekarang serba mahal kalo hidup sendiri, 
+                  kalo hidup berdua bisa mengurangi biaya hidup yang besar, kenapa nggak? 
+                  tapi menurut aku faktor keluarga juga berpengaruh, orang yang tangki cintanya ga terpenuhi di keluarganya 
+                  biasanya bakal nyari cinta itu di orang lain yang bikin dia ngerasa dicintai. 
+                  Tapi ada juga yang karena penasaran, pingin menuhin nafsu doang juga ada.
                 </p>
               </details>
               <details>
-                <summary>Bagaimana pengaruh media dan budaya asing?</summary>
+                <summary>Menurut kamu, apakah media sosial, film, budaya asing mempengaruhi cara berpikir anak muda terhadap living together?</summary>
                 <p>
-                  Menurut narasumber, media sosial, film, dan budaya asing dapat
-                  memengaruhi cara berpikir anak muda, termasuk melalui rasa takut
-                  tertinggal tren.
+                  Media sosial, FIlm, Budaya asing berpengaruh dalam merubah cara berpikir anak muda di Indonesia. 
+                  Anak muda zaman sekarang bisa dibilang FOMO alias takut ketinggalan sesuatu yang lagi ngetrend. 
+                  Mereka siap ngelakuin apa aja tanpa pertimbangan dari berbagai aspek tanpa mikirin konsekuensi yang bakal terjadi. 
+                  Budaya atau kebiasaan asing juga berpengaruh, banyak dari mereka yang meniru budaya asing biar dianggep "keren" 
+                  di zaman sekarang tanpa menyaring hal-hal tersebut.
                 </p>
               </details>
               <details>
-                <summary>Apa arti ideologi terbuka menurut narasumber?</summary>
+                <summary>Apakah menurut kamu Pancasila sebagai ideologi terbuka berarti masyarakat harus menerima semua gaya hidup yang berkembang akibat perubahan zaman?</summary>
                 <p>
-                  Pancasila memberi ruang untuk menghadapi perubahan zaman,
-                  tetapi tidak berarti menerima semua pengaruh tanpa penyaringan.
+               Pancasila sebagai ideologi terbuka memang menuntut Indonesia untuk berkembang mengikuti perubahan zaman, 
+               tapi terbuka bukan berarti menerima semua hal asing yang masuk tanpa disaring atau tanpa dipilih 
+               mana yang sesuai dan mana yang tidak sesuai dengan nilai pancasila.
                 </p>
               </details>
               <details>
-                <summary>Apa yang perlu dilakukan generasi muda?</summary>
+                <summary>Menurut kamu, apa yang harus dilakukan generasi muda dalam menghadapi hal ini?</summary>
                 <p>
-                  Narasumber berpendapat bahwa generasi muda perlu bersikap kritis
-                  dan membedakan pengaruh yang sesuai maupun tidak sesuai dengan
-                  nilai Pancasila.
+                  Generasi muda harus kritis dalam memilih budaya atau dampak dari adanya globalisasi dan westernisasi. 
+                  pancasila itu diambil dari kebiasaan masyarakat Indonesia. Jadi, generasi muda harus memilih budaya 
+                  yang masuk yang tidak menyimpang dengan kebiasaan masyarakat Indonesia yang sudah ada sejak dahulu dan mampu membedakan 
+                  mana budaya yang sesuai dan yang tidak sesuai dengan nilai-nilai Pancasila.
                 </p>
               </details>
               <p className="interview-caveat">
